@@ -41,7 +41,7 @@
 
 [参考](http://es6.ruanyifeng.com/#docs/let)
 
-##### 1. 块级作用域
+#### 1. 块级作用域
 
 ```javascript
 // es5, 只有函数作用域，没有块级作用域
@@ -73,7 +73,7 @@ for(let i = 0; i < 5; i++) {
 console.log(i);
 ```
 
-##### 2. 不能重复声明
+#### 2. 不能重复声明
 
 ```js
 // es5, 可以重复声明
@@ -87,7 +87,7 @@ let a = 2;
 console.log(a);
 ```
 
-##### 3. 不存在变量名提升
+#### 3. 不存在变量名提升
 
 ```js
 // es5 变量名会提升
@@ -99,7 +99,7 @@ console.log(a);
 let a = 1;
 ```
 
-##### 4. 暂时性死区
+#### 4. 暂时性死区
 
 ```js
 // es5
@@ -119,7 +119,7 @@ function foo() {
 }
 ```
 
-##### 5.const的不同
+#### 5.const的不同
 
 > 除与let声明的变量都有以上特性外，用const声明的一定是一个只读的常量，他的值不能被更改。
 
@@ -137,7 +137,7 @@ b.push(5);
 console.log(b);
 ```
 
-##### 小结
+#### 小结
 
 1. 块级作用域，声明的变量只在let/const命令所在的代码块内有效。
 2. 不能重复声明
@@ -151,7 +151,7 @@ console.log(b);
 
 >  解构就是从数组或对象中提取值，并赋给相应变量。
 
-##### 1. 基本用法
+#### 1.基本用法
 
 ```js
 // es5
@@ -166,14 +166,14 @@ var fullName = { first: 'san', last: 'zhang' };
 let { first, last } = fullName;
 ```
 
-#####2. 默认值
+#### 2.默认值
 
 ```js
 let { first = 'dada' } = {};
 console.log(first);
 ```
 
-##### 3. 函数解构赋值
+#### 3.函数解构赋值
 
 ```js
 function foo(a) {
@@ -199,9 +199,9 @@ var html = '<div>' + count + '</div>';
 const html = `<div>${count}</div>`;
 ```
 
-##函数
+## 函数
 
-##### 1. 函数默认值
+#### 1.函数默认值
 
 ```js
 // es5, 默认值，使用逻辑操作符||实现
@@ -216,7 +216,7 @@ function foo(a = 'dada') {
 };
 ```
 
-##### 2. 箭头函数
+#### 2.箭头函数
 
 ```js
 const foo = () => {
@@ -263,7 +263,7 @@ console.log(c); // {first: "san", last: "zhang"}
 
 ```
 
-#####1. 通常用来新建对象或数组
+#### 1.通常用来新建对象或数组
 
 ```js
 const b = { first: 'san', last: 'zhang' };
@@ -277,7 +277,7 @@ const d = { first: 'si', ...b };
 console.log(d); // { first: 'si', last: 'zhang' };
 ```
 
-#####2. 合并对象
+#### 2.合并对象
 
 ```js
 const a = { aa: 1 };
@@ -287,7 +287,7 @@ const b = { bb: 2 };
 const ab = { ...a, ...b };
 ```
 
-##### 3. 多说一句，对象简写
+#### 3.多说一句，对象简写
 
 ```js
 // key和value一样的键值对，可以简写为key
@@ -321,7 +321,7 @@ const f = new Foo(1, 2);
 console.log(f.x, f.y); // 1 2
 ```
 
-##### 1. 支持继承
+#### 1.支持继承
 
 ```js
 class Animal {
@@ -346,7 +346,7 @@ const d = new Dog('corgi');
 d.printName(); // corgi
 ```
 
-##### 2.支持对象属性和静态属性及方法
+#### 2.支持对象属性和静态属性及方法
 
 ```js
 class Car {
@@ -374,7 +374,7 @@ console.log(Car.go()); // go....
 
 ## Module语法
 
-##### export导出多个变量 
+#### 1.export导出多个变量 
 
 ```js
 // main.js 导出一个变量
@@ -393,7 +393,7 @@ import * as obj from './main.js';
 console.log(obj.a, obj.b);
 ```
 
-#####export 导出默认值
+#### 2.export导出默认值
 
 > 1. 同一个文件中允许同时存在export default 和 export 单个变量
 > 2. 不能通过解构引用通过export default导出的模块中的变量
