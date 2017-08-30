@@ -390,38 +390,40 @@ export {
 
 // index.js中使用main.js中的变量
 import { a, b } from './main.js';
-// 可以不解构
+// 可以不解构, 引用整个模块
 import * as obj from './main.js';
 console.log(obj.a, obj.b);
 ```
 
 #### 2.export导出默认值
 
-> 1. 同一个文件中允许同时存在export default 和 export 单个变量
+> 1. import时可以取任意名字
 > 2. 不能通过解构引用通过export default导出的模块中的变量
-> 3. 一个文件中只能有一个export default
-> 4. import时可以取任意名字
+> 3. 一个文件中可以同时存在export和export default, 但不能同时存在多个export default;
 
 ```js
-// main.js导出一个默认变量, 可以同时存在export, export default
+// main.js
 const obj = { a: 1, b: 2 };
 export const dada = 100;
 export default obj;
 
-// 正确，index.js使用main.js中的变量
+// 1. 引用默认变量obj
 import obj from './main.js';
 console.log(obj); // { a: 1, b: 2 }
 
-// 错误，不能通过解构引用通过export default导出的模块中的变量
-import { a } from './main.js'; // a = undefined
-
-// 错误，main.js 中存在两个export default
-export default { a: 1 };
-export default { b: 2 };
-
-// 正确，import时可以取任意名字
+// 2. 导出默认的变量，可以取任意名字
 import myobj from './main.js';
-console.log(myobj); // { a: 1, b: 2 }
+
+// 3. 不能导出obj.a
+import { a } from './main.js';
+
+// 4. 一个文件中可以同时存在export和export default, 但不能同时存在多个export default;
+// main.js, 正确
+export const a = 1;
+export default { b: 1 };
+// main.js, 错误
+export default { a: 1 };
+export default { b: 2 }; // error
 ```
 
 
