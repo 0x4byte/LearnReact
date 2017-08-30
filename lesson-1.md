@@ -414,7 +414,7 @@ console.log(obj); // { a: 1, b: 2 }
 // 2. 导出默认的变量，可以取任意名字
 import myobj from './main.js';
 
-// 3. 不能导出obj.a
+// 3. 不能解构导出obj.a
 import { a } from './main.js';
 
 // 4. 一个文件中可以同时存在export和export default, 但不能同时存在多个export default;
