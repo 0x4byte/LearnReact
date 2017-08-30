@@ -51,11 +51,13 @@ function foo() {
 foo();
 console.log(a);
 
+// es5, if语句
 if(true) {
     var b = 1;
 }
 console.log(b);
 
+// es5, for循环
 for(var i = 0; i < 5; i++) {
     ...
 }
@@ -63,10 +65,11 @@ console.log(i);
   
 // es6, 用let及const声明的变量默认拥有块级作用域, 即只在let/const命令所在的代码块内有效
 if(true) {
-	let a = 1;
+    let a = 1;
 }
 console.log(a);
 
+// es6，for循环
 for(let i = 0; i < 5; i++) {
     ...
 }
@@ -105,17 +108,17 @@ let a = 1;
 // es5
 var a = 1;
 function foo() {
-	console.log(a);
-  	
-  	var a = 10;
+    console.log(a);
+
+    var a = 10;
 }
 
 // es6, 用let声明变量,会将变量绑定到当前块作用域, 不受外界影响
 var a = 1;
 function foo() {
     console.log(a);
-  
-	let a = 10;
+
+    let a = 10;
 }
 ```
 
@@ -177,7 +180,7 @@ console.log(first);
 
 ```js
 function foo(a) {
-	let { first, last } = a;
+    let { first, last } = a;
     console.log(first, last);
 };
 // 你可以这样做
@@ -207,7 +210,7 @@ const html = `<div>${count}</div>`;
 // es5, 默认值，使用逻辑操作符||实现
 function foo(a) {
     const aa = a || 'dada';
-  	console.log(aa); // dada
+    console.log(aa); // dada
 };
 
 // es6
@@ -220,7 +223,7 @@ function foo(a = 'dada') {
 
 ```js
 const foo = () => {
-	return 'FOO';
+    return 'FOO';
 };
 // 等价于es5
 const foo = function () {
@@ -247,7 +250,7 @@ const foo = function () {
 
 ## 展开运算符
 
-> 用三个点...表示扩展运算符
+> 用三个点...表示展开运算符
 
 ```js
 // 将一个数组展开
@@ -260,7 +263,6 @@ const b = { first: 'san', last: 'zhang' };
 console.log(b); // {first: "san", last: "zhang"}
 const c = { ...b };
 console.log(c); // {first: "san", last: "zhang"}
-
 ```
 
 #### 1.通常用来新建对象或数组
@@ -303,7 +305,7 @@ const b = { bb: 2, a };
 // es5，实现class功能
 function Foo(x, y) {
     this.x = x;
-  	this.y = y;
+    this.y = y;
 };
 
 var f = new Foo(1, 2);
@@ -313,7 +315,7 @@ console.log(f.x, f.y); // 1 2
 class Foo {
     constructor(x, y) {
         this.x = x;
-      	this.y = y;
+        this.y = y;
     }
 };
 
@@ -330,7 +332,7 @@ class Animal {
     }
   
     // 实例方法
-  	printName() {
+    printName() {
         console.log(this.name);
     }
 };
@@ -355,13 +357,13 @@ class Car {
         run: true,
     }
 
-	// 静态属性, 也可说类属性
-	static propTypes = {
+    // 静态属性, 也可说类属性
+    static propTypes = {
         color: 'red',
     }
 
-	// 静态方法
-	static go() {
+    // 静态方法
+    static go() {
         console.log('go....');
     }
 }
