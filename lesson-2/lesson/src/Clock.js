@@ -1,6 +1,25 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
+const element = props => {
+  if(props.show) {
+    return <div>huang</div>
+  }
+
+  return <div>yonglin</div>
+}
+
+const forEachTest = () => {
+  const data = list.map(item => {
+    return <div>item.name</div>
+  });
+  // [<div>a</div>, <div>b</div>]
+
+  const element = <div>{ data }</div>
+}
+
+const element = <div>{ a === 1 ? 'aaa' : 'bbb' }</div>
+
 // old
 // const Clock = props => {
 //   return (

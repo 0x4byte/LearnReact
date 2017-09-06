@@ -26,12 +26,14 @@ export default class LifeCycle extends Component {
   componentWillReceiveProps(nextProps) {
     console.info('LiefCycle componentWillReceiveProps call...');
     console.info('nextProps => ', nextProps);
+    console.info('curProps => ', this.props);
   }
 
   shouldComponentUpdate(nextProps, nextState) {
     console.info('LiefCycle shouldComponentUpdate call...');
     console.info('nextProps', nextProps);
     console.info('nextState', nextState);
+    console.info('curProps => ', this.props);
 
     return true;
   }
@@ -40,12 +42,14 @@ export default class LifeCycle extends Component {
     console.info('LiefCycle componentWillUpdate call...');
     console.info('nextProps', nextProps);
     console.info('nextState', nextState);
+    console.info('curProps => ', this.props);
   }
 
   componentDidUpdate(prevProps, prevState) {
     console.info('LiefCycle componentDidUpdate call...');
     console.info('prevProps', prevProps);
     console.info('prevState', prevState);
+    console.info('curProps => ', this.props);
   }
 
   handleSizeChange = () => {
