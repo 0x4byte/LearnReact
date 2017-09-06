@@ -90,14 +90,14 @@ let a = 2;
 console.log(a);
 ```
 
-#### 3. 不存在变量名提升
+#### 3. 不存在变量名声明提升
 
 ```js
-// es5 变量名会提升
+// es5 变量名声明会提升
 console.log(a);
 var a = 1;
 
-// es6 变量名不会提升
+// es6 变量名声明不会提升
 console.log(a);
 let a = 1;
 ```
@@ -425,6 +425,8 @@ export default { b: 1 };
 export default { a: 1 };
 export default { b: 2 }; // error
 ```
+
+作业: 
 
 
 

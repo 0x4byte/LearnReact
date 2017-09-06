@@ -10,23 +10,23 @@
 6. 扩展运算符
 7. class基本用法及继承
 8. module语法
-9. promise简介
 
 ## React知识点
 1. 一个小的demo，与老的编写方式对比
 2. JSX语法介绍
 3. 组件及props
 4. state及生命周期
+
 5. 条件渲染及列表&key
 6. 状态提升
-7. 组件间通信
-8. 受控组件和非受控组件
-9. react理念及组件拆分
+7. 受控组件和非受控组件
+8. react理念及组件拆分
+9. 组件间通信
 
 ## TODO项目实战
 1. redux简述(组件通信引入)
 2. react-router简述(页面跳转引入)
-3. fetch
+3. promise及fetch
 4. webpack(部署引入)
 5. eslint(规范引入)
 6. react-impression
