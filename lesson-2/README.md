@@ -240,10 +240,9 @@ componentWillUnmount() {}
 
 组件更新时
 
-```
+```jsx
 componentWillReceiveProps() {}
 shouldComponentUpdate() {}
 componentWillUpdate() {}
 componentDidUpdate() {}
 ```
-

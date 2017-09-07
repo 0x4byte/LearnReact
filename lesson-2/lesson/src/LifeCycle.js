@@ -57,7 +57,7 @@ export default class LifeCycle extends Component {
   }
 
   render() {
-    console.info('LifeCycle render call...');
+    console.info('LifeCycle render call...', this.props);
 
     return (
       <div>
