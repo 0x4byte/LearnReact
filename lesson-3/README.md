@@ -94,7 +94,7 @@ const todoItems = todos.map((todo, index) =>
 >
 > 非受控组件: form表单的数据交由dom自己处理。传统的操作真实dom获取数据，类似jQuery
 >
-> 大多数情况下，推荐使用非受控组件
+> 大多数情况下，推荐使用受控组件
 
 比较:
 
