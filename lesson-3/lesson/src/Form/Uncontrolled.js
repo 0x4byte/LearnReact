@@ -7,7 +7,7 @@ class NameForm extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.input.value);
+    alert('A name was submitted: ' + this.myInput.value);
     event.preventDefault();
   }
 
@@ -19,7 +19,10 @@ class NameForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Name:
-            <input type="text" defaultValue="哈哈" ref={(input) => this.input = input} />
+            <input
+              type="text"
+              defaultValue="哈哈"
+              ref={(input) => this.myInput = input} />
           </label>
           <input type="submit" value="Submit" />
         </form>

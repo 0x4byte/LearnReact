@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Controlled from './controlled';
-import MultiControlled from './multiControlled';
-import UnControlled from './uncontrolled';
+import Controlled from './Controlled';
+import MultiControlled from './MultiControlled';
+import UnControlled from './Uncontrolled';
 
 const App = () => {
   return (
