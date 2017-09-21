@@ -232,7 +232,7 @@ ReactDOM.render(
 ```jsx
 constructor() {}
 componentWillMount() {} // 组件将要挂载
-render() {}			  // 渲染
+render() {}			        // 渲染
 componentDidMount() {} //  组件已经挂载
 // 组件将要卸载时调用
 componentWillUnmount() {}
