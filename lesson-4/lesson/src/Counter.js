@@ -3,18 +3,19 @@ import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 
 const actions = {
-  increment: () => {
-    return { type: 'INCREMENT' }
+  increment: value => {
+    return { type: 'INCREMENT', payload: value }
   },
   decrement: () => {
     return { type: 'DECREMENT' }
   },
 }
 
-const reducers = (state = 0, action) => {
+const initState = 0;
+const reducers = (state = initState, action) => {
   switch(action.type) {
     case 'INCREMENT':
-      return state + 1;
+      return state + action.payload;
     case 'DECREMENT':
       return state - 1;
     default:
@@ -28,7 +29,7 @@ const Counter = () => {
   return (
     <div>
       <div>{ store.getState() }</div>
-      <button onClick={() => store.dispatch(actions.increment())}>+</button>
+      <button onClick={() => store.dispatch(actions.increment(2))}>+</button>
       <button onClick={() => store.dispatch(actions.decrement())}>-</button>
     </div>
   )
@@ -40,3 +41,7 @@ const render = () => {
 
 render();
 store.subscribe(render);
+
+
+
+
