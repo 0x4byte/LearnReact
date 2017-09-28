@@ -1,0 +1,28 @@
+input[type='text'] {
+  width: 100%;
+  margin: 10px 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  padding: 10px;
+}
+input[type='checkbox'] {
+  margin-bottom: 10px;
+}
+label {
+  user-select: none;
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 300px;
+}
+
+tr, td {
+  border: 1px solid #000;
+}
+
+.content {
+  width: 300px;
+  margin: 0 auto;
+}
