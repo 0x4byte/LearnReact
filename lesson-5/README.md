@@ -1,5 +1,7 @@
 ## 项目工程介绍
 
+用脚手架生成项目: [请移步](https://github.com/NewDadaFE/generator-react-impression)
+
 ### node_modules
 
 > 所有依赖包所在位置。执行`yarn install`或`npm install`后，会生成此文件夹。
