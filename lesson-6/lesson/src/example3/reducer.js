@@ -3,7 +3,7 @@ import dotProp from 'dot-prop-immutable';
 
 // Action Creators
 export const setTodo = createAction('example-3/SET_TODO');
-export const delTodo = createAction('example-4/SET_DEL_TODO');
+export const delTodo = createAction('example-3/SET_DEL_TODO');
 
 // Reducer
 const initialState = {
